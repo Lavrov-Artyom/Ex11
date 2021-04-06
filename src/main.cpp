@@ -17,6 +17,5 @@ int main() {
   std::cout << "The train's length : " << train->CountLength();
   train->Print();
   return 0;
-
 }
 

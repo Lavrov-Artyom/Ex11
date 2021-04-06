@@ -27,7 +27,6 @@ Train::Train()
 }
 
 void Train::AddCage(Cage* _cage) {
-    
     if (nullptr == begin) {
         _cage->right = _cage;
         _cage->left = _cage;
@@ -43,14 +42,12 @@ void Train::AddCage(Cage* _cage) {
 }
 
 void Train::CreateCages(unsigned int _length) {
-  
   for (unsigned int i = 0; i < _length; i++) {
       AddCage(new Cage(std::rand() % 2));
   }
 }
 
 unsigned int Train::CountLength() {
-
   Cage* a = begin;
   begin->on();
 
@@ -68,11 +65,10 @@ unsigned int Train::CountLength() {
 }
 
 void Train::Print() {
-
     Cage* b = begin;
 
     for (unsigned int step = 1; ; step++) {
-        std::cout << "Cage ¹ " << step << ", lamp - " << (b->isLight() ? "on\n" : "off\n");
+        std::cout <<"Cage "<< step <<",lamp-"<<(b->isLight()?"on\n":"off\n");
         b = b->left;
         if (b == begin)
             return;
