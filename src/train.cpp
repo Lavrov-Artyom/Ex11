@@ -68,7 +68,7 @@ void Train::Print() {
     Cage* b = begin;
 
     for (unsigned int step = 1; ; step++) {
-        std::cout << "Cage number " << step 
+        std::cout << "Cage number " << step
             << ",lamp-" << (b->isLight() ? "on\n" : "off\n");
         b = b->left;
         if (b == begin)
